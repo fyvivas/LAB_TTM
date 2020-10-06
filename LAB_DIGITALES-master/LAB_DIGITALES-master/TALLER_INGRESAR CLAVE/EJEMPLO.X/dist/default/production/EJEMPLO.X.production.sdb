@@ -1,0 +1,304 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"4 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"11 D:\Desktop\UNICAUCA\LAB-DIGITALES\EEPROM - INGRESAR CLAVE\EJEMPLO.X\eeprom.c
+[v _eeprom_writex eeprom_writex `(v  1 e 1 0 ]
+"30
+[v _eeprom_readx eeprom_readx `(uc  1 e 1 0 ]
+"11 D:\Desktop\UNICAUCA\LAB-DIGITALES\EEPROM - INGRESAR CLAVE\EJEMPLO.X\lcd.c
+[v _LCD_putc LCD_putc `(v  1 e 1 0 ]
+"67
+[v _LCD_command LCD_command `(v  1 e 1 0 ]
+"124
+[v _LCD_init LCD_init `(v  1 e 1 0 ]
+"164
+[v _LCD_puts LCD_puts `(v  1 e 1 0 ]
+"172
+[v _LCD_gotoxy LCD_gotoxy `(v  1 e 1 0 ]
+"197
+[v _LCD_clear LCD_clear `(v  1 e 1 0 ]
+"79 D:\Desktop\UNICAUCA\LAB-DIGITALES\EEPROM - INGRESAR CLAVE\EJEMPLO.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"12 D:\Desktop\UNICAUCA\LAB-DIGITALES\EEPROM - INGRESAR CLAVE\EJEMPLO.X\teclado.c
+[v _teclado_init teclado_init `(v  1 e 1 0 ]
+"19
+[v _teclado_getc teclado_getc `(uc  1 e 1 0 ]
+"2454 C:\Program Files\Microchip\xc8\v2.30\pic\include\proc\pic18f4550.h
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+"2564
+[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
+[s S72 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"2737
+[s S81 . 1 `uc 1 SPP0 1 0 :1:0 
+`uc 1 SPP1 1 0 :1:1 
+`uc 1 SPP2 1 0 :1:2 
+`uc 1 SPP3 1 0 :1:3 
+`uc 1 SPP4 1 0 :1:4 
+`uc 1 SPP5 1 0 :1:5 
+`uc 1 SPP6 1 0 :1:6 
+`uc 1 SPP7 1 0 :1:7 
+]
+[s S90 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
+]
+[u S93 . 1 `S72 1 . 1 0 `S81 1 . 1 0 `S90 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES93  1 e 1 @3971 ]
+"3074
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+[s S161 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"3291
+[s S170 . 1 `uc 1 LD0 1 0 :1:0 
+`uc 1 LD1 1 0 :1:1 
+`uc 1 LD2 1 0 :1:2 
+`uc 1 LD3 1 0 :1:3 
+`uc 1 LD4 1 0 :1:4 
+`uc 1 LD5 1 0 :1:5 
+`uc 1 LD6 1 0 :1:6 
+`uc 1 LD7 1 0 :1:7 
+]
+[u S179 . 1 `S161 1 . 1 0 `S170 1 . 1 0 ]
+[v _LATDbits LATDbits `VES179  1 e 1 @3980 ]
+"3626
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"3848
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+"4002
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+[s S203 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"4034
+[u S221 . 1 `S203 1 . 1 0 `S72 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES221  1 e 1 @3989 ]
+[s S339 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CFGS 1 0 :1:6 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"4871
+[s S348 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 EEFS 1 0 :1:6 
+]
+[u S351 . 1 `S339 1 . 1 0 `S348 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES351  1 e 1 @4006 ]
+"4916
+[v _EECON2 EECON2 `VEuc  1 e 1 @4007 ]
+"4923
+[v _EEDATA EEDATA `VEuc  1 e 1 @4008 ]
+"4930
+[v _EEADR EEADR `VEuc  1 e 1 @4009 ]
+[s S282 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"8533
+[s S285 . 1 `uc 1 RBIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S294 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IP 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S299 . 1 `S282 1 . 1 0 `S285 1 . 1 0 `S294 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES299  1 e 1 @4081 ]
+[s S367 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"8615
+[s S376 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S385 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S389 . 1 `S367 1 . 1 0 `S376 1 . 1 0 `S385 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES389  1 e 1 @4082 ]
+"79 D:\Desktop\UNICAUCA\LAB-DIGITALES\EEPROM - INGRESAR CLAVE\EJEMPLO.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"102
+[v main@IZQ IZQ `[4]i  1 a 8 29 ]
+"101
+[v main@DERE DERE `[4]i  1 a 8 21 ]
+"85
+[v main@inclave inclave `[5]uc  1 a 5 37 ]
+"86
+[v main@countinclave countinclave `i  1 a 2 56 ]
+"90
+[v main@clave4check clave4check `i  1 a 2 54 ]
+"89
+[v main@clave3check clave3check `i  1 a 2 52 ]
+"88
+[v main@clave2check clave2check `i  1 a 2 50 ]
+"87
+[v main@clave1check clave1check `i  1 a 2 48 ]
+"91
+[v main@clavechecktotal clavechecktotal `i  1 a 2 42 ]
+"84
+[v main@tecla tecla `uc  1 a 1 62 ]
+"99
+[v main@direccion4 direccion4 `uc  1 a 1 61 ]
+"98
+[v main@direccion3 direccion3 `uc  1 a 1 60 ]
+"97
+[v main@direccion2 direccion2 `uc  1 a 1 59 ]
+"96
+[v main@direccion1 direccion1 `uc  1 a 1 58 ]
+"99
+[v main@F3722 F3722 `[4]i  1 s 8 F3722 ]
+"101
+[v main@F3724 F3724 `[4]i  1 s 8 F3724 ]
+"216
+} 0
+"12 D:\Desktop\UNICAUCA\LAB-DIGITALES\EEPROM - INGRESAR CLAVE\EJEMPLO.X\teclado.c
+[v _teclado_init teclado_init `(v  1 e 1 0 ]
+{
+"17
+} 0
+"19
+[v _teclado_getc teclado_getc `(uc  1 e 1 0 ]
+{
+"21
+[v teclado_getc@letras letras `[4][4]uc  1 a 16 0 ]
+"25
+[v teclado_getc@i i `i  1 a 2 17 ]
+"26
+[v teclado_getc@valor valor `uc  1 a 1 16 ]
+"19
+[v teclado_getc@F3196 F3196 `[4][4]uc  1 s 16 F3196 ]
+"69
+} 0
+"11 D:\Desktop\UNICAUCA\LAB-DIGITALES\EEPROM - INGRESAR CLAVE\EJEMPLO.X\eeprom.c
+[v _eeprom_writex eeprom_writex `(v  1 e 1 0 ]
+{
+[v eeprom_writex@address address `i  1 p 2 0 ]
+[v eeprom_writex@data data `uc  1 p 1 2 ]
+"28
+} 0
+"30
+[v _eeprom_readx eeprom_readx `(uc  1 e 1 0 ]
+{
+[v eeprom_readx@address address `i  1 p 2 0 ]
+"37
+} 0
+"164 D:\Desktop\UNICAUCA\LAB-DIGITALES\EEPROM - INGRESAR CLAVE\EJEMPLO.X\lcd.c
+[v _LCD_puts LCD_puts `(v  1 e 1 0 ]
+{
+"165
+[v LCD_puts@i i `uc  1 a 1 6 ]
+"164
+[v LCD_puts@data data `*.25uc  1 p 2 1 ]
+[v LCD_puts@nBytes nBytes `uc  1 p 1 3 ]
+"170
+} 0
+"11
+[v _LCD_putc LCD_putc `(v  1 e 1 0 ]
+{
+[v LCD_putc@ch ch `uc  1 a 1 wreg ]
+[v LCD_putc@ch ch `uc  1 a 1 wreg ]
+"13
+[v LCD_putc@ch ch `uc  1 a 1 0 ]
+"66
+} 0
+"124
+[v _LCD_init LCD_init `(v  1 e 1 0 ]
+{
+"162
+} 0
+"197
+[v _LCD_clear LCD_clear `(v  1 e 1 0 ]
+{
+"199
+} 0
+"172
+[v _LCD_gotoxy LCD_gotoxy `(v  1 e 1 0 ]
+{
+[v LCD_gotoxy@x x `uc  1 a 1 wreg ]
+"173
+[v LCD_gotoxy@DDRAMAddr DDRAMAddr `uc  1 a 1 4 ]
+"172
+[v LCD_gotoxy@x x `uc  1 a 1 wreg ]
+[v LCD_gotoxy@y y `uc  1 p 1 1 ]
+[v LCD_gotoxy@x x `uc  1 a 1 5 ]
+"183
+} 0
+"67
+[v _LCD_command LCD_command `(v  1 e 1 0 ]
+{
+[v LCD_command@cmd cmd `uc  1 a 1 wreg ]
+[v LCD_command@cmd cmd `uc  1 a 1 wreg ]
+"69
+[v LCD_command@cmd cmd `uc  1 a 1 0 ]
+"123
+} 0
