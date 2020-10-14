@@ -1,19 +1,19 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "3033 D:\mplab\include\pic18f4550.h
 [v _LATB `Vuc ~T0 @X0 0 e@3978 ]
-"9470
-[v _LATD0 `Vb ~T0 @X0 0 e@31840 ]
-"9472
-[v _LATD1 `Vb ~T0 @X0 0 e@31841 ]
-"9474
-[v _LATD2 `Vb ~T0 @X0 0 e@31842 ]
+"9460
+[v _LATC0 `Vb ~T0 @X0 0 e@31832 ]
+"9462
+[v _LATC1 `Vb ~T0 @X0 0 e@31833 ]
+"9464
+[v _LATC2 `Vb ~T0 @X0 0 e@31834 ]
 "43 D:\mplab\include\pic18.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
 "26 LCD_20x4_H_file.h
 [v _MSdelay `(v ~T0 @X0 0 ef1`ui ]
-"3954 D:\mplab\include\pic18f4550.h
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
+"3801 D:\mplab\include\pic18f4550.h
+[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
 "3580
 [v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
@@ -3545,21 +3545,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LCD_20x4_C_file.c: 13: LATB = cmd;
 "13
 [e = _LATB _cmd ]
-[; ;LCD_20x4_C_file.c: 14: LATD0 = 0;
+[; ;LCD_20x4_C_file.c: 14: LATC0 = 0;
 "14
-[e = _LATD0 -> -> 0 `i `b ]
-[; ;LCD_20x4_C_file.c: 15: LATD1 = 0;
+[e = _LATC0 -> -> 0 `i `b ]
+[; ;LCD_20x4_C_file.c: 15: LATC1 = 0;
 "15
-[e = _LATD1 -> -> 0 `i `b ]
-[; ;LCD_20x4_C_file.c: 16: LATD2 = 1;
+[e = _LATC1 -> -> 0 `i `b ]
+[; ;LCD_20x4_C_file.c: 16: LATC2 = 1;
 "16
-[e = _LATD2 -> -> 1 `i `b ]
+[e = _LATC2 -> -> 1 `i `b ]
 [; ;LCD_20x4_C_file.c: 17: __nop();
 "17
 [e ( ___nop ..  ]
-[; ;LCD_20x4_C_file.c: 18: LATD2 = 0;
+[; ;LCD_20x4_C_file.c: 18: LATC2 = 0;
 "18
-[e = _LATD2 -> -> 0 `i `b ]
+[e = _LATC2 -> -> 0 `i `b ]
 [; ;LCD_20x4_C_file.c: 19: MSdelay(3);
 "19
 [e ( _MSdelay (1 -> -> 3 `i `ui ]
@@ -3581,21 +3581,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LCD_20x4_C_file.c: 24: LATB = char_data;
 "24
 [e = _LATB _char_data ]
-[; ;LCD_20x4_C_file.c: 25: LATD0 = 1;
+[; ;LCD_20x4_C_file.c: 25: LATC0 = 1;
 "25
-[e = _LATD0 -> -> 1 `i `b ]
-[; ;LCD_20x4_C_file.c: 26: LATD1 = 0;
+[e = _LATC0 -> -> 1 `i `b ]
+[; ;LCD_20x4_C_file.c: 26: LATC1 = 0;
 "26
-[e = _LATD1 -> -> 0 `i `b ]
-[; ;LCD_20x4_C_file.c: 27: LATD2 = 1;
+[e = _LATC1 -> -> 0 `i `b ]
+[; ;LCD_20x4_C_file.c: 27: LATC2 = 1;
 "27
-[e = _LATD2 -> -> 1 `i `b ]
+[e = _LATC2 -> -> 1 `i `b ]
 [; ;LCD_20x4_C_file.c: 28: __nop();
 "28
 [e ( ___nop ..  ]
-[; ;LCD_20x4_C_file.c: 29: LATD2 = 0;
+[; ;LCD_20x4_C_file.c: 29: LATC2 = 0;
 "29
-[e = _LATD2 -> -> 0 `i `b ]
+[e = _LATC2 -> -> 0 `i `b ]
 [; ;LCD_20x4_C_file.c: 30: MSdelay(3);
 "30
 [e ( _MSdelay (1 -> -> 3 `i `ui ]
@@ -3611,9 +3611,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LCD_20x4_C_file.c: 34: {
 [e :U _LCD_Init ]
 [f ]
-[; ;LCD_20x4_C_file.c: 35: TRISD = 0;
+[; ;LCD_20x4_C_file.c: 35: TRISC = 0;
 "35
-[e = _TRISD -> -> 0 `i `uc ]
+[e = _TRISC -> -> 0 `i `uc ]
 [; ;LCD_20x4_C_file.c: 36: TRISB = 0;
 "36
 [e = _TRISB -> -> 0 `i `uc ]

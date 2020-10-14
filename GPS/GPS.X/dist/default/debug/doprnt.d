@@ -1,1 +1,0 @@
- dist/default/debug/doprnt.d  dist/default/debug/doprnt.p1:  D:/mplab/sources/common/doprnt.c

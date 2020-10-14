@@ -4750,28 +4750,28 @@ void MSdelay(unsigned int);
 void LCD_Command (char cmd)
 {
 LATB = cmd;
-LATD0 = 0;
-LATD1 = 0;
-LATD2 = 1;
+LATC0 = 0;
+LATC1 = 0;
+LATC2 = 1;
 __nop();
-LATD2 = 0;
+LATC2 = 0;
 MSdelay(3);
 }
 
 void LCD_Char (char char_data)
 {
 LATB = char_data;
-LATD0 = 1;
-LATD1 = 0;
-LATD2 = 1;
+LATC0 = 1;
+LATC1 = 0;
+LATC2 = 1;
 __nop();
-LATD2 = 0;
+LATC2 = 0;
 MSdelay(3);
 }
 
 void LCD_Init (void)
 {
-TRISD = 0;
+TRISC = 0;
 TRISB = 0;
 
 MSdelay(20);

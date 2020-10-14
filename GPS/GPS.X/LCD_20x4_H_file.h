@@ -10,12 +10,12 @@
 #include<pic18f4550.h>
 
 #define LCD_Data_Dir TRISB				/* Define LCD data port direction */
-#define LCD_Command_Dir TRISD			/* Define LCD command port direction register */
+#define LCD_Command_Dir TRISC			/* Define LCD command port direction register */
 #define LCD_Data_Port LATB				/* Define LCD data port */
-#define LCD_Command_Port LATD			/* Define LCD data port */
-#define EN LATD2							/* Define Enable signal pin */
-#define RW LATD1							/* Define Read/Write signal pin */
-#define RS LATD0							/* Define Register Select (data reg./command reg.) signal pin */
+#define LCD_Command_Port LATC			/* Define LCD data port */
+#define EN LATC2							/* Define Enable signal pin */
+#define RW LATC1							/* Define Read/Write signal pin */
+#define RS LATC0							/* Define Register Select (data reg./command reg.) signal pin */
 
 void LCD_Command (char);				/* LCD command write function */
 void LCD_Char (char);					/* LCD data write function */

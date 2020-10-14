@@ -4938,6 +4938,8 @@ char CommaCounter;
 char Data_Buffer[15];
 volatile unsigned int GGA_Index;
 volatile unsigned char IsItGGAString = 0;
+volatile unsigned char IsEndGGA = 0;
+volatile unsigned char IsLastEndGGA = 0;
 
 char Temperature[10];
 float celsius;
@@ -4956,7 +4958,7 @@ PIE1bits.RCIE=1;
 USART_Init(9600);
 ADC_Init();
 
-# 87
+# 101
 while(1){
 
 
@@ -4965,6 +4967,12 @@ celsius = (celsius/10.00);
 
 sprintf(Temperature,"%d%cC  ",(int)celsius,0xdf);
 
+if(IsItGGAString == 0){
+
+
+
+}
+else{
 
 memset(GPS_Buffer,0,15);
 LCD_String_xy(1,0,"UTC Time: ");
@@ -4981,29 +4989,28 @@ Latitude = get_latitude(GGA_Pointers[0]);
 Latitude = convert_to_degrees(Latitude);
 sprintf(GPS_Buffer,"%.05f",Latitude);
 LCD_String(GPS_Buffer);
-memset(GPS_Buffer,0,15);
-
 strcat(stringBT, GPS_Buffer);
 strcat(stringBT, ",");
 
+memset(GPS_Buffer,0,15);
 LCD_String_xy(3,0,"Long: ");
 Longitude = get_longitude(GGA_Pointers[2]);
 Longitude = convert_to_degrees(Longitude);
 sprintf(GPS_Buffer,"%.05f",Longitude);
 LCD_String(GPS_Buffer);
-memset(GPS_Buffer,0,15);
-
 strcat(stringBT, GPS_Buffer);
 strcat(stringBT, ",");
 
+memset(GPS_Buffer,0,15);
 LCD_String_xy(4,0,"Alt: ");
 Altitude = get_altitude(GGA_Pointers[7]);
 sprintf(GPS_Buffer,"%.2f",Altitude);
 LCD_String(GPS_Buffer);
 
 strcat(stringBT, Temperature);
-
+strcat(stringBT, "\r\n");
 USART_SendString(stringBT);
+}
 
 }
 }
@@ -5133,10 +5140,10 @@ return decimal;
 }
 
 
+void __interrupt () Serial_ISR (void) {
 
 
-void interrupt Serial_ISR()
-{
+
 
 if(RCIF){
 GIE = 0;
@@ -5150,11 +5157,21 @@ CREN=1;
 if(received_char =='$'){
 GGA_Index = 0;
 IsItGGAString = 0;
+IsLastEndGGA = 0;
 CommaCounter = 0;
+IsEndGGA = 0;
 }
 else if(IsItGGAString == 1){
 if(received_char == ',' ) GGA_Pointers[CommaCounter++] = GGA_Index;
 GGA_Buffer[GGA_Index++] = received_char;
+if(received_char == '\n'){
+if (IsLastEndGGA == '\r'){
+IsEndGGA = 1;
+}
+}
+else{
+IsLastEndGGA = received_char;
+}
 }
 else if(GGA_CODE[0] == 'G' && GGA_CODE[1] == 'G' && GGA_CODE[2] == 'A'){
 IsItGGAString = 1;

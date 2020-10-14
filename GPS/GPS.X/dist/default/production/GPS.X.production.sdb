@@ -71,26 +71,26 @@
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 "15 D:\mplab\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"40 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\GPS.c
+"42 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\GPS.c
 [v _main main `(v  1 e 1 0 ]
-"138
+"157
 [v _ADC_Init ADC_Init `(v  1 e 1 0 ]
-"147
+"166
 [v _ADC_Read ADC_Read `(i  1 e 2 0 ]
-"164
+"183
 [v _get_gpstime get_gpstime `(ul  1 e 4 0 ]
-"179
+"198
 [v _get_latitude get_latitude `(f  1 e 3 0 ]
-"196
+"215
 [v _get_longitude get_longitude `(f  1 e 3 0 ]
-"214
+"233
 [v _get_altitude get_altitude `(f  1 e 3 0 ]
-"230
+"249
 [v _convert_time_to_UTC convert_time_to_UTC `(v  1 e 1 0 ]
-"242
+"261
 [v _convert_to_degrees convert_to_degrees `(f  1 e 3 0 ]
-"265
-[v _Serial_ISR Serial_ISR `II(v  1 e 1 0 ]
+"282
+[v _Serial_ISR Serial_ISR `IIH(v  1 e 1 0 ]
 "11 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\LCD_20x4_C_file.c
 [v _LCD_Command LCD_Command `(v  1 e 1 0 ]
 "22
@@ -115,8 +115,8 @@
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "3580
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-"3954
-[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"3801
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
 [s S75 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
@@ -248,12 +248,12 @@
 [v _GIE GIE `VEb  1 e 0 @32663 ]
 "9314
 [v _GO GO `VEb  1 e 0 @32273 ]
-"9470
-[v _LATD0 LATD0 `VEb  1 e 0 @31840 ]
-"9472
-[v _LATD1 LATD1 `VEb  1 e 0 @31841 ]
-"9474
-[v _LATD2 LATD2 `VEb  1 e 0 @31842 ]
+"9460
+[v _LATC0 LATC0 `VEb  1 e 0 @31832 ]
+"9462
+[v _LATC1 LATC1 `VEb  1 e 0 @31833 ]
+"9464
+[v _LATC2 LATC2 `VEb  1 e 0 @31834 ]
 "9774
 [v _RCIF RCIF `VEb  1 e 0 @31989 ]
 "10102
@@ -285,24 +285,28 @@
 [v _GGA_Index GGA_Index `VEui  1 e 2 0 ]
 "34
 [v _IsItGGAString IsItGGAString `VEuc  1 e 1 0 ]
+"35
+[v _IsEndGGA IsEndGGA `VEuc  1 e 1 0 ]
 "36
-[v _Temperature Temperature `[10]uc  1 e 10 0 ]
-"37
-[v _celsius celsius `f  1 e 3 0 ]
+[v _IsLastEndGGA IsLastEndGGA `VEuc  1 e 1 0 ]
 "38
-[v _stringBT stringBT `[50]uc  1 e 50 0 ]
+[v _Temperature Temperature `[10]uc  1 e 10 0 ]
+"39
+[v _celsius celsius `f  1 e 3 0 ]
 "40
+[v _stringBT stringBT `[50]uc  1 e 50 0 ]
+"42
 [v _main main `(v  1 e 1 0 ]
 {
-"43
+"45
 [v main@GPS_Buffer GPS_Buffer `[15]uc  1 a 15 66 ]
-"41
+"43
 [v main@Time Time `ul  1 a 4 81 ]
-"42
+"44
 [v main@Longitude Longitude `f  1 a 3 93 ]
 [v main@Latitude Latitude `f  1 a 3 90 ]
 [v main@Altitude Altitude `f  1 a 3 85 ]
-"136
+"155
 } 0
 "8 D:\mplab\sources\common\strcpy.c
 [v _strcpy strcpy `(*.39uc  1 e 2 0 ]
@@ -335,51 +339,51 @@
 [v memset@n n `ui  1 p 2 19 ]
 "22
 } 0
-"196 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\GPS.c
+"215 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\GPS.c
 [v _get_longitude get_longitude `(f  1 e 3 0 ]
 {
 [v get_longitude@long_pointer long_pointer `uc  1 a 1 wreg ]
-"199
+"218
 [v get_longitude@Long_Buffer Long_Buffer `[15]uc  1 a 15 3 ]
-"200
+"219
 [v get_longitude@_longitude _longitude `f  1 a 3 18 ]
-"197
+"216
 [v get_longitude@long_index long_index `uc  1 a 1 23 ]
-"198
+"217
 [v get_longitude@index index `uc  1 a 1 22 ]
-"196
+"215
 [v get_longitude@long_pointer long_pointer `uc  1 a 1 wreg ]
-"198
+"217
 [v get_longitude@long_pointer long_pointer `uc  1 a 1 21 ]
-"212
+"231
 } 0
-"179
+"198
 [v _get_latitude get_latitude `(f  1 e 3 0 ]
 {
 [v get_latitude@lat_pointer lat_pointer `uc  1 a 1 wreg ]
-"182
+"201
 [v get_latitude@Lat_Buffer Lat_Buffer `[15]uc  1 a 15 3 ]
-"183
+"202
 [v get_latitude@_latitude _latitude `f  1 a 3 18 ]
-"180
+"199
 [v get_latitude@lat_index lat_index `uc  1 a 1 23 ]
-"181
+"200
 [v get_latitude@index index `uc  1 a 1 22 ]
-"179
+"198
 [v get_latitude@lat_pointer lat_pointer `uc  1 a 1 wreg ]
 [v get_latitude@lat_pointer lat_pointer `uc  1 a 1 21 ]
-"194
+"213
 } 0
-"164
+"183
 [v _get_gpstime get_gpstime `(ul  1 e 4 0 ]
 {
-"166
+"185
 [v get_gpstime@Time_Buffer Time_Buffer `[15]uc  1 a 15 46 ]
-"167
+"186
 [v get_gpstime@_Time _Time `ul  1 a 4 61 ]
-"165
+"184
 [v get_gpstime@index index `uc  1 a 1 65 ]
-"175
+"194
 } 0
 "5 D:\mplab\sources\common\atol.c
 [v _atol atol `(l  1 e 4 0 ]
@@ -393,23 +397,23 @@
 [v atol@s s `*.39Cuc  1 p 2 27 ]
 "27
 } 0
-"214 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\GPS.c
+"233 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\GPS.c
 [v _get_altitude get_altitude `(f  1 e 3 0 ]
 {
 [v get_altitude@alt_pointer alt_pointer `uc  1 a 1 wreg ]
-"217
+"236
 [v get_altitude@Alt_Buffer Alt_Buffer `[12]uc  1 a 12 3 ]
-"218
+"237
 [v get_altitude@_Altitude _Altitude `f  1 a 3 15 ]
-"216
+"235
 [v get_altitude@index index `uc  1 a 1 20 ]
-"215
+"234
 [v get_altitude@alt_index alt_index `uc  1 a 1 19 ]
-"214
+"233
 [v get_altitude@alt_pointer alt_pointer `uc  1 a 1 wreg ]
-"216
+"235
 [v get_altitude@alt_pointer alt_pointer `uc  1 a 1 18 ]
-"228
+"247
 } 0
 "200 D:\mplab\sources\common\atof.c
 [v _atof atof `(d  1 e 3 0 ]
@@ -420,9 +424,9 @@
 "35
 [v _strtod strtod `(d  1 e 3 0 ]
 {
-[u S732 . 4 `d 1 _l 3 0 `l 1 _v 4 0 ]
+[u S734 . 4 `d 1 _l 3 0 `l 1 _v 4 0 ]
 "62
-[v strtod@_u _u `S732  1 a 4 61 ]
+[v strtod@_u _u `S734  1 a 4 61 ]
 "48
 [v strtod@expon expon `c  1 a 1 60 ]
 "37
@@ -453,18 +457,18 @@
 [v ___lmul@multiplicand multiplicand `ul  1 p 4 19 ]
 "129
 } 0
-"242 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\GPS.c
+"261 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\GPS.c
 [v _convert_to_degrees convert_to_degrees `(f  1 e 3 0 ]
 {
-"245
+"264
 [v convert_to_degrees@decimal decimal `f  1 a 3 17 ]
 [v convert_to_degrees@dec_deg dec_deg `f  1 a 3 12 ]
 [v convert_to_degrees@minutes minutes `f  1 a 3 9 ]
-"247
+"266
 [v convert_to_degrees@degrees degrees `i  1 a 2 15 ]
-"242
+"261
 [v convert_to_degrees@NMEA_lat_long NMEA_lat_long `f  1 p 3 6 ]
-"260
+"279
 } 0
 "32 D:\mplab\sources\common\awtoft.c
 [v ___awtoft __awtoft `(f  1 e 3 0 ]
@@ -475,25 +479,25 @@
 [v ___awtoft@c c `i  1 p 2 23 ]
 "42
 } 0
-"230 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\GPS.c
+"249 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\GPS.c
 [v _convert_time_to_UTC convert_time_to_UTC `(v  1 e 1 0 ]
 {
-"232
+"251
 [v convert_time_to_UTC@sec sec `ui  1 a 2 64 ]
 [v convert_time_to_UTC@min min `ui  1 a 2 62 ]
 [v convert_time_to_UTC@hour hour `ui  1 a 2 60 ]
-"230
+"249
 [v convert_time_to_UTC@UTC_Time UTC_Time `ul  1 p 4 52 ]
-"240
+"259
 } 0
 "492 D:\mplab\sources\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 "528
 [v sprintf@val val `ul  1 a 4 42 ]
-[u S567 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
+[u S569 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
 "526
-[v sprintf@tmpval tmpval `S567  1 a 4 38 ]
+[v sprintf@tmpval tmpval `S569  1 a 4 38 ]
 "516
 [v sprintf@fval fval `d  1 a 3 46 ]
 "504
@@ -796,24 +800,24 @@
 [v MSdelay@val val `ui  1 p 2 15 ]
 "83
 } 0
-"147 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\GPS.c
+"166 C:\Users\ASUS\Documents\GitHub\labTTM_2020\GPS\GPS.X\GPS.c
 [v _ADC_Read ADC_Read `(i  1 e 2 0 ]
 {
-"149
+"168
 [v ADC_Read@digital digital `i  1 a 2 21 ]
-"147
+"166
 [v ADC_Read@channel channel `i  1 p 2 15 ]
-"161
+"180
 } 0
-"138
+"157
 [v _ADC_Init ADC_Init `(v  1 e 1 0 ]
 {
-"145
+"164
 } 0
-"265
-[v _Serial_ISR Serial_ISR `II(v  1 e 1 0 ]
+"282
+[v _Serial_ISR Serial_ISR `IIH(v  1 e 1 0 ]
 {
-"270
+"289
 [v Serial_ISR@received_char received_char `uc  1 a 1 14 ]
-"294
+"323
 } 0

@@ -32,6 +32,8 @@ char CommaCounter;
 char Data_Buffer[15];
 volatile unsigned int GGA_Index;
 volatile unsigned char	IsItGGAString	= 0;
+volatile unsigned char  IsEndGGA = 0;
+volatile unsigned char  IsLastEndGGA = 0;
 
 char Temperature[10];    
 float celsius;
@@ -81,8 +83,20 @@ void main(void) {
     // stringBT = "35,1245,2557,50"
     // stringBT = "42,1245,2557,25"
     // stringBT = "35,1245,2557,25"
+
     
-    
+//    while(1){
+//        
+//        /* convert digital value to temperature */
+//        celsius = (ADC_Read(0)*4.88);
+//        celsius = (celsius/10.00);
+//        /*convert integer value to ASCII string */
+//        sprintf(Temperature,"%d%cC  ",(int)celsius,0xdf);
+//        LCD_String_xy(1,0,"TEMP: ");
+//        LCD_String(Temperature);
+//        LCD_String("  "); 
+//    
+//    }
     
     while(1){
         
@@ -91,8 +105,14 @@ void main(void) {
     celsius = (celsius/10.00);
     /*convert integer value to ASCII string */
     sprintf(Temperature,"%d%cC  ",(int)celsius,0xdf);
-        
-        
+    
+    if(IsItGGAString == 0){
+       //LCD_String_xy(1,0,"TEMP: ");
+       //LCD_String(Temperature);
+       //LCD_String("  ");  
+    }
+    else{
+    
 	memset(GPS_Buffer,0,15);
 	LCD_String_xy(1,0,"UTC Time: ");
     Time = get_gpstime();            /* Extract Time */
@@ -108,29 +128,28 @@ void main(void) {
 	Latitude = convert_to_degrees(Latitude);  /* convert raw latitude in degree decimal*/
 	sprintf(GPS_Buffer,"%.05f",Latitude);			/* convert float value to string */
 	LCD_String(GPS_Buffer);            				/* display latitude in degree */
-	memset(GPS_Buffer,0,15);
-	
-    strcat(stringBT, GPS_Buffer);
+	strcat(stringBT, GPS_Buffer);
     strcat(stringBT, ",");
     
+    memset(GPS_Buffer,0,15);
 	LCD_String_xy(3,0,"Long: ");
 	Longitude = get_longitude(GGA_Pointers[2]);/* Extract Latitude */
 	Longitude = convert_to_degrees(Longitude);/* convert raw longitude in degree decimal*/
 	sprintf(GPS_Buffer,"%.05f",Longitude);		/* convert float value to string */
 	LCD_String(GPS_Buffer);            				/* display latitude in degree */
-	memset(GPS_Buffer,0,15);
-	
     strcat(stringBT, GPS_Buffer);
     strcat(stringBT, ",");
     
+    memset(GPS_Buffer,0,15);
 	LCD_String_xy(4,0,"Alt: ");
 	Altitude = get_altitude(GGA_Pointers[7]); /* Extract Latitude */
 	sprintf(GPS_Buffer,"%.2f",Altitude);			/* convert float value to string */
 	LCD_String(GPS_Buffer);            				/* display latitude in degree */
 
     strcat(stringBT, Temperature);
-    
+    strcat(stringBT, "\r\n");
     USART_SendString(stringBT);  /* send LED ON status to terminal */
+    }
     //modo de bajo consumo
 	}
 }
@@ -260,10 +279,10 @@ float convert_to_degrees(float NMEA_lat_long){
 }
 
 
-//void __interrupt () Serial_ISR (void) {
+void __interrupt () Serial_ISR (void) {
 
-void interrupt Serial_ISR()   
-{
+//void interrupt Serial_ISR()   
+//{
 	 
 	if(RCIF){
 		GIE  = 0;							/* Disable global interrupt */
@@ -277,11 +296,21 @@ void interrupt Serial_ISR()
 		if(received_char =='$'){                                                    /* check for '$' */
 			GGA_Index = 0;
 			IsItGGAString = 0;
+            IsLastEndGGA = 0;
 			CommaCounter = 0;
+            IsEndGGA = 0;
 		}
 		else if(IsItGGAString == 1){                                             /* if true save GGA info. into buffer */
 			if(received_char == ',' ) GGA_Pointers[CommaCounter++] = GGA_Index;    /* store instances of ',' in buffer */
 			GGA_Buffer[GGA_Index++] = received_char;
+            if(received_char == '\n'){
+                if (IsLastEndGGA == '\r'){
+                    IsEndGGA = 1;
+                }
+            }
+            else{
+                IsLastEndGGA = received_char;
+            }
         }
 		else if(GGA_CODE[0] == 'G' && GGA_CODE[1] == 'G' && GGA_CODE[2] == 'A'){ /* check for GGA string */
 			IsItGGAString = 1;
