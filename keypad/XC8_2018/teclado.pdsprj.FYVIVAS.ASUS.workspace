@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffff8300000009000000d3040000cf020000</PLACEMENT>
+  <PLACEMENT>2c00000002000000020000000083ffff0083ffffffffffffffffffff8300000009000000d3040000cf020000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="ARES"/>
  </FRAME>
@@ -33,7 +33,7 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="52" x="108" flags="00000008" y="169" h="12" pid="3" iid="2">
+   <POPUP w="380" x="108" flags="00000008" y="169" h="171" pid="3" iid="2">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="16" x="128" flags="0000000a" y="189" h="32" pid="7" iid="2">
@@ -96,7 +96,7 @@
      <ITEM name="TopLineAddress">00300000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="18" x="248" flags="00000008" y="309" h="32" pid="10" iid="2">
+   <POPUP w="142" x="248" flags="00000008" y="309" h="391" pid="10" iid="2">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="268" flags="00000002" y="329" h="8" pid="13" iid="2">
